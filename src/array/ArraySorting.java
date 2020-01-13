@@ -8,4 +8,7 @@
 package array;
 
 public class ArraySorting {
+    public void bubbleSort(int[] array) {
+
+    }
 }
