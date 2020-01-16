@@ -19,11 +19,14 @@ public class ArraySorting {
         printArray(numbers);
     }
 
-    public static void bubbleSort(int[] array) {
-        for (int j = 0; j < array.length; j++) {
-            for (int i = 0; i < (array.length - 1) - j; i++) {
-                if (array[i] > array[i + 1]) {
-                    swapArrayValues(i, i + 1, array);
+    public static void bubbleSort(int[] arr) {
+        int len = arr.length;
+        for (int i = 0; i < len; i++) {
+            for (int j = 1; j < len - i; j++) {
+                if (arr[j - 1] > arr[j]) {
+                    int tmp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = tmp;
                 }
             }
         }
