@@ -7,10 +7,12 @@
 
 package array;
 
-import java.util.Arrays;
+import java.util.Arrays; //Package
 
-public class ArraySorting {
-    public static void main(String[] args) {
+public class ArraySorting //Class
+{
+    public static void main(String[] args) 
+    {
         int[] numbers = new int[10];
         printArray(numbers);
         initializeArray(numbers);
@@ -19,29 +21,36 @@ public class ArraySorting {
         printArray(numbers);
     }
 
-    public static void bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) //Declaring function bubbleSort
+    {
         int len = arr.length;
-        for (int i = 0; i < len; i++) {
-            for (int j = 1; j < len - i; j++) {
-                if (arr[j - 1] > arr[j]) {
-                    int tmp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = tmp;
+        for (int row = 0; row < len; row++)  //Outer loop
+        {
+            for (int col = 1; col < len - row; col++) //Inner loop
+            {
+                if (arr[col - 1] > arr[col])
+                {
+                    int tmp = arr[col - 1];
+                    arr[col - 1] = arr[col];
+                    arr[col] = tmp;
                 }
             }
         }
     }
 
-    private static void swapArrayValues(int i, int i1, int[] array) {
-        int temp = array[i];
-        array[i] = array[i1];
-        array[i1] = temp;
+    private static void swapArrayValues(int row, int newrow, int[] array) //Swaping values to newrow
+    {
+        int temp = array[row];
+        array[row] = array[newrow];
+        array[newrow] = temp;
     }
 
 
-    public static void initializeArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = 10 - i;
+    public static void initializeArray(int[] array)
+    {
+        for (int row = 0; row < array.length; row++) 
+        {
+            array[row] = 10 - row;
         }
     }
 
