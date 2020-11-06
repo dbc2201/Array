@@ -8,10 +8,19 @@
 package array;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArraySorting {
     public static void main(String[] args) {
         int[] numbers = new int[10];
+        
+        //Taking input from user for making an array
+        Scanner sc = new Scanner(System.in);
+        for(int i=0; i<10; i++){
+            System.out.println("Enter the value for the "+i+" position in array");
+            numbers[i] = sc.nextInt();
+        }
+       
         printArray(numbers);
         initializeArray(numbers);
         printArray(numbers);
